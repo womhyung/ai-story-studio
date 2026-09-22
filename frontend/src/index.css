@@ -205,6 +205,7 @@ button {
   padding: 12px 20px;
   border-radius: 10px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .secondary-button {
@@ -377,6 +378,12 @@ button {
   display: flex;
   gap: 12px;
   margin-bottom: 24px;
+}
+
+.results-info {
+  margin-bottom: 16px;
+  color: #888d99;
+  font-size: 13px;
 }
 
 .search-field {

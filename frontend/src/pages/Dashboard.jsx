@@ -5,6 +5,8 @@ import {
   Image
 } from "lucide-react";
 
+import { Link } from "react-router-dom";
+
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import StatCard from "../components/StatCard";
@@ -22,9 +24,12 @@ export default function Dashboard() {
 
         <section className="content">
 
+          {/* BOAS-VINDAS */}
+
           <div className="welcome">
 
             <div>
+
               <span className="eyebrow">
                 AI STORY STUDIO
               </span>
@@ -37,13 +42,20 @@ export default function Dashboard() {
                 Continue construindo seus mundos,
                 personagens e histórias.
               </p>
+
             </div>
 
-            <button className="primary-button">
+            <Link
+              to="/stories"
+              className="primary-button"
+            >
               + Nova história
-            </button>
+            </Link>
 
           </div>
+
+
+          {/* ESTATÍSTICAS */}
 
           <div className="stats-grid">
 
@@ -77,23 +89,31 @@ export default function Dashboard() {
 
           </div>
 
+
+          {/* HISTÓRIAS RECENTES */}
+
           <section className="stories-section">
 
             <div className="section-header">
 
               <div>
-                <h3>Minhas histórias</h3>
+
+                <h3>
+                  Minhas histórias
+                </h3>
 
                 <p>
                   Continue trabalhando nos seus projetos.
                 </p>
+
               </div>
 
-              <a href="/stories">
+              <Link to="/stories">
                 Ver todas →
-              </a>
+              </Link>
 
             </div>
+
 
             <StoryCard
               title="A vida que eu deveria ter"
