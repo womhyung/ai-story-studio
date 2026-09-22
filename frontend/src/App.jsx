@@ -12,7 +12,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Navigate to="/dashboard" />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
@@ -23,6 +22,10 @@ function App() {
         <Route path="/videos" element={<Videos />} />
         <Route path="/settings" element={<Settings />} />
 
+        <Route
+          path="*"
+          element={<Navigate to="/dashboard" />}
+        />
       </Routes>
     </BrowserRouter>
   );
