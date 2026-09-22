@@ -2,7 +2,6 @@ import {
   LayoutDashboard,
   BookOpen,
   Users,
-  Map,
   Clapperboard,
   Image,
   Video,
@@ -26,11 +25,6 @@ const menuItems = [
     label: "Personagens",
     path: "/characters",
     icon: Users
-  },
-  {
-    label: "Cenários",
-    path: "/scenes",
-    icon: Map
   },
   {
     label: "Cenas",
@@ -69,7 +63,7 @@ export default function Sidebar() {
 
           return (
             <NavLink
-              key={item.path + item.label}
+              key={item.path}
               to={item.path}
               className={({ isActive }) =>
                 isActive ? "menu-item active" : "menu-item"
@@ -85,7 +79,12 @@ export default function Sidebar() {
 
       <div className="sidebar-bottom">
 
-        <NavLink to="/settings" className="menu-item">
+        <NavLink
+          to="/settings"
+          className={({ isActive }) =>
+            isActive ? "menu-item active" : "menu-item"
+          }
+        >
           <Settings size={20} />
           <span>Configurações</span>
         </NavLink>
