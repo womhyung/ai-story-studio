@@ -11,7 +11,6 @@ import StatCard from "../components/StatCard";
 import StoryCard from "../components/StoryCard";
 
 export default function Dashboard() {
-
   return (
     <div className="app">
 
@@ -46,7 +45,6 @@ export default function Dashboard() {
 
           </div>
 
-
           <div className="stats-grid">
 
             <StatCard
@@ -79,7 +77,6 @@ export default function Dashboard() {
 
           </div>
 
-
           <section className="stories-section">
 
             <div className="section-header">
@@ -98,41 +95,14 @@ export default function Dashboard() {
 
             </div>
 
-
-            <div className="story-card">
-
-              <div className="story-cover">
-                AS
-              </div>
-
-              <div className="story-info">
-
-                <span className="story-status">
-                  Em desenvolvimento
-                </span>
-
-                <h4>
-                  A vida que eu deveria ter
-                </h4>
-
-                <p>
-                  Uma história sobre escolhas,
-                  consequências, recomeços e relações humanas.
-                </p>
-
-                <div className="story-meta">
-                  <span>15 capítulos</span>
-                  <span>32 cenas</span>
-                  <span>12 personagens</span>
-                </div>
-
-              </div>
-
-              <button className="secondary-button">
-                Abrir história
-              </button>
-
-            </div>
+            <StoryCard
+              title="A vida que eu deveria ter"
+              description="Uma história sobre escolhas, consequências, recomeços e relações humanas."
+              status="Em desenvolvimento"
+              chapters={15}
+              scenes={32}
+              characters={12}
+            />
 
           </section>
 
