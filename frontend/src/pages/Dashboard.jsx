@@ -8,6 +8,7 @@ import {
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import StatCard from "../components/StatCard";
+import StoryCard from "../components/StoryCard";
 
 export default function Dashboard() {
 
